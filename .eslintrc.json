@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "parserOptions": { 
+    "project": ["./tsconfig.base.json"]
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "extends": [
+    "@foundation/eslint-config"
+  ],
+  "plugins": [
+    "yaml"
+  ],
+  "rules": {},
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.d.ts"
+      ],
+      "extends": [
+        "@foundation/eslint-config/typescript"
+      ],
+      "rules": {
+      }
+    },
+    {
+      "files": [
+        "*.yaml",
+        "*.yml"
+      ],
+      "plugins": [
+        "yaml"
+      ],
+      "extends": [
+        "plugin:yaml/recommended"
+      ]
+    }
+  ],
+  "ignorePatterns": [
+    "**/dist/**/*"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  "editor.rulers": [100],
+  "files.eol": "\n",
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "eslint.workingDirectories": [
+    {
+      "directory": "./apps/cli",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "./apps/www-nextjs",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "./packages/core",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "./packages/eslint-config",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "./packages/eslint-config-react",
+      "changeProcessCWD": true
+    }
+  ],
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+}

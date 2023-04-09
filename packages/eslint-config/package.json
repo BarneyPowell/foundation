@@ -1,0 +1,36 @@
+{
+  "name": "@foundation/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "packageManager": "yarn@3.5.0",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./node": "./node.js",
+    "./typescript": "./typescript.js"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "yarn lint --fix"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.2"
+  },
+  "engines": {
+    "node": "^18.15.0"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@types/eslint": "^8",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-yaml": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8"
+  }
+}

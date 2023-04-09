@@ -1,0 +1,24 @@
+{
+  "name": "@foundation/eslint-config-react",
+  "packageManager": "yarn@3.5.0",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "yarn lint --fix"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-import-resolver-node": "^0.3.7",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.37.0",
+    "typescript": "^5.0.2"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@foundation/cli",
+  "packageManager": "yarn@3.5.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "clean": "rimraf ./dist",
+    "compile": "tsc --build",
+    "start": "yarn node dist/index.js",
+    "run": "ts-node ./src/index.ts",
+    "test": "echo hello"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@foundation/core": "workspace:*"
+  }
+}
