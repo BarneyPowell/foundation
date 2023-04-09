@@ -1,5 +1,8 @@
 # Foundation
+
 Monorepo setup showcasing different frameworks and technologies for front-end engineering.
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/BarneyPowell/foundation/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/BarneyPowell/foundation/tree/main)
 
 ## Initial setup
 
