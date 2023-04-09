@@ -25,4 +25,4 @@ workflows:
       - node/run:
           version: 18.15.0
           pkg-manager: yarn
-          yarn-run: workspace @foundation/www-nextjs build
+          yarn-run: build:nextjs
