@@ -33,7 +33,7 @@
     "package:core": "yarn workspace @foundation/core",
     "app:cli": "yarn workspace @foundation/cli",
     "app:www-nextjs": "yarn workspace @foundation/www",
-    "build:nextjs": "yarn app:next-js build",
+    "build:nextjs": "yarn app:www-nextjs build",
     "root:lint": "yarn workspaces foreach -ptv run lint",
     "root:clean": "yarn workspaces foreach run clean",
     "compile": "tsc --build",
