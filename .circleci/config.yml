@@ -8,13 +8,13 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 
-jobs:
-  build-nextjs:
-    docker:
-      - image: cimg/node:18.15-browsers
-    steps:
-      - node/run:
-          yarn-run: workspace @foundation/www-nextjs build
+# jobs:
+#   build-nextjs:
+#     docker:
+#       - image: cimg/node:18.15-browsers
+#     steps:
+#       - node/run:
+#           yarn-run: workspace @foundation/www-nextjs build
 
 
 # Orchestrate jobs using workflows
@@ -22,4 +22,6 @@ jobs:
 workflows:
   build-nextjs-workflow:
     jobs:
-      - build-nextjs
+      - node/run:
+          version: 18.15.0
+          yarn-run: workspace @foundation/www-nextjs build
