@@ -4,8 +4,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   openAnalyzer: false
 });
 
+const nextBuildId = require('next-build-id');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  generateBuildId: () => nextBuildId({ dir: __dirname }),
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   experimental: {
     // Required:
