@@ -5,6 +5,33 @@ version: 2.1
 orbs:
   node: circleci/node@5.1.0
 
+executors:
+    default:
+        description: |
+            Select the version of Node.js to use. Uses CircleCI's highly cached convenience images built for CI.
+            Any available tag from this list can be used: https://hub.docker.com/r/cimg/node/tags
+        docker:
+            - image: cimg/node:<<parameters.tag>>
+        parameters:
+            resource_class:
+                default: large
+                description: Configure the executor resource class
+                enum:
+                    - small
+                    - medium
+                    - medium+
+                    - large
+                    - xlarge
+                    - 2xlarge
+                    - 2xlarge+
+                type: enum
+            tag:
+                default: lts
+                description: |
+                    Pick a specific cimg/node image version tag: https://hub.docker.com/r/cimg/node
+                type: string
+        resource_class: << parameters.resource_class >>
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
 
