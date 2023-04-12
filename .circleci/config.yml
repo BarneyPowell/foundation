@@ -175,14 +175,16 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  build-nextjs-workflow:
+  build-all-workflow:
     jobs:
       - custom-run:
           version: 18.15.0
           pkg-manager: yarn
-          yarn-run: build:nextjs
+          yarn-run: root:build
           teardown:
             - store_artifacts:
                 path: ~/project/apps/www-nextjs/.next/analyze/client.json
                 destination: client-bundle-analysis.json
-      - post-nextjs-stats
+      - post-nextjs-stats:
+          requires:
+            - custom-run

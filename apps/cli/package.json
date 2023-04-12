@@ -5,7 +5,7 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "yarn clean && yarn compile",
+    "x-build": "yarn clean && yarn compile",
     "clean": "rimraf ./dist",
     "compile": "tsc --build",
     "start": "yarn node dist/index.js",
