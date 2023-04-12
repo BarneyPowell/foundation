@@ -143,6 +143,7 @@ jobs:
             ORB_PARAM_YARN_RUN: <<parameters.yarn-run>>
           name: Run <<parameters.pkg-manager>> <<parameters.npm-run>>
           working_directory: <<parameters.app-dir>>
+      - steps: << parameters.teardown >>
 
 
   post-nextjs-stats:
