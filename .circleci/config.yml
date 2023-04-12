@@ -98,7 +98,7 @@ jobs:
     steps:
       - checkout
       - steps: << parameters.setup >>
-      - install-packages:
+      - node/install-packages:
           app-dir: <<parameters.app-dir>>
           cache-version: <<parameters.cache-version>>
           override-ci-command: <<parameters.override-ci-command>>
