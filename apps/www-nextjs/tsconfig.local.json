@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "composite": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "moduleResolution": "nodenext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], 
+    "isolatedModules": true,
+    "target": "ESNext",
+    "module": "ESNext"
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "esm": true,
+    "compilerOptions": {
+    }
+  }
+}

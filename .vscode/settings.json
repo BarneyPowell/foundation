@@ -26,6 +26,10 @@
       "changeProcessCWD": true
     },
     {
+      "directory": "./packages/build-utils",
+      "changeProcessCWD": true
+    },
+    {
       "directory": "./packages/eslint-config",
       "changeProcessCWD": true
     },
