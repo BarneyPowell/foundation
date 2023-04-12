@@ -5,7 +5,10 @@
     "dev": "next dev",
     "build": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "script": "ts-node --project tsconfig.local.json -r tsconfig-paths/register",
+    "build-script": "tsc --noEmit -p ",
+    "generateBundleStats": "ts-node --project tsconfig.local.json scripts/compareBuilds.mts"
   },
   "dependencies": {
     "@foundation/core": "workspace:^",
@@ -19,7 +22,6 @@
   "devDependencies": {
     "@foundation/eslint-config": "workspace:^",
     "@foundation/eslint-config-react": "workspace:^",
-    "@next/bundle-analyzer": "^13.3.0",
     "@types/node": "18.0.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
@@ -35,6 +37,8 @@
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3"
   }
 }

@@ -1,7 +1,10 @@
 const withPlugins = require('next-compose-plugins');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-  openAnalyzer: false
+const { withNextBundleAnalyzer } = require('@foundation/build-utils/nextBundleAnalyzer');
+
+const withBundleAnalyzer = withNextBundleAnalyzer({
+  enabled: true,
+  generateStatsFile: true,
+  analyzerMode: "json"
 });
 
 const nextBuildId = require('next-build-id');

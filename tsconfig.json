@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "@foundation/core": ["packages/core/src"],
-      "@foundation/core/*": ["packages/core/src/*"]
-    },  
   },
   "files": [], 
   "references": [
     { "path": "apps/cli" },  
     { "path": "apps/www-nextjs" },
     { "path": "packages/core" },
+    { "path": "packages/build-utils" },
   ]
 }

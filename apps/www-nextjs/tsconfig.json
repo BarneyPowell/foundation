@@ -18,8 +18,10 @@
       ],
       "@/styles/*": [
         "styles/*"
-      ]
-    },
+      ],
+      "@foundation/build-utils": ["../packages/build-utils"],
+      "@foundation/build-utils/*": ["../packages/build-utils/*"], 
+    },  
     "plugins": [
       {
         "name": "next"
@@ -27,7 +29,7 @@
     ],
     "target": "es5",
     "noEmit": true,
-    "isolatedModules": true
+    "isolatedModules": true,
   },
   "include": [
     "next-env.d.ts",
@@ -37,5 +39,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
