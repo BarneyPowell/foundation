@@ -160,16 +160,19 @@ jobs:
 
             if [ $(echo $pr_response | jq length) -eq 0 ]; then
               echo "No PR found to update"
-            else
-              pr_comment_url=$(echo $pr_response | jq -r ".[]._links.comments.href")
+              exit 0
             fi
 
+            pr_comment_url=$(echo $pr_response | jq -r ".[]._links.comments.href")
             curl --location --request POST "$pr_comment_url" \
               -u $GH_USER:$GH_TOKEN \
               --header 'Content-Type: application/json' \
               --data-raw '{
                   "body": "This would be the data to add"
-                }'
+              }'
+            
+
+
 
 
 
