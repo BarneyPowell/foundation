@@ -35,6 +35,7 @@
     "app:cli": "yarn workspace @foundation/cli",
     "app:www-nextjs": "yarn workspace @foundation/www-nextjs",
     "build:nextjs": "yarn app:www-nextjs build",
+    "root:build": "yarn workspaces foreach -ptv run build",
     "root:lint": "yarn workspaces foreach -ptv run lint",
     "root:clean": "yarn workspaces foreach run clean",
     "compile": "tsc --build",
