@@ -4,7 +4,7 @@ const { withNextBundleAnalyzer } = require('@foundation/build-utils/nextBundleAn
 const withBundleAnalyzer = withNextBundleAnalyzer({
   enabled: true,
   generateStatsFile: true,
-  analyzerMode: "json"
+  analyzerMode: 'json',
 });
 
 const nextBuildId = require('next-build-id');
@@ -20,7 +20,6 @@ const nextConfig = {
 };
 
 module.exports = withPlugins([
-  [withBundleAnalyzer],
+  // [withBundleAnalyzer],
   // your other plugins here
 ], nextConfig);
-
