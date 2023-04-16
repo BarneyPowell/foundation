@@ -1,13 +1,16 @@
 {
   "name": "@foundation/core",
   "packageManager": "yarn@3.5.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "yarn clean && yarn compile",
     "clean": "rimraf ./dist",
-    "compile": "tsc --build",
+    "compile": "yarn compile-esm && yarn compile-cjs",
+    "compile-esm": "tsc -p ./tsconfig.browser.json",
+    "compile-cjs": "tsc -p ./tsconfig.node.json",
     "watch": "tsc --watch",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },

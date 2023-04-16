@@ -1,5 +1,7 @@
 import '@/styles/globals.css';
 import React from 'react';
+import { getProduct } from '@foundation/core/src/services/products'; // works
+import { getContent } from '@foundation/core/src/services/content'; // works
 
 export default function RootLayout({
   children,
@@ -12,7 +14,7 @@ export default function RootLayout({
         <title>Foundation: Test App</title>
       </head>
       <body className="">
-        <h1>Hello world.</h1>
+        <h1>Hello world: { getProduct().name } { getContent().name }</h1>
         <div className="">
     
               {children}
