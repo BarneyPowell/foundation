@@ -1,20 +1,14 @@
-const localExtends = [
-  './errors',
-  './best-practices',
-  './style',
-].map(require.resolve);
+const localExtends = ['./errors', './best-practices', './style'].map(
+  require.resolve
+);
 
 module.exports = {
   env: {
     node: true,
   },
-  plugins: [
-  ],
+  plugins: [],
   settings: {},
-  extends: [
-    'plugin:node/recommended',
-    ...localExtends,
-  ],
+  extends: ['plugin:node/recommended', ...localExtends],
   parserOptions: {
     ecmaVersion: 2022,
   },

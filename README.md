@@ -36,7 +36,7 @@ $ yarn set version stable
 
 ## Setting up Typescript
 
-``` bash
+```bash
 $ yarn add --dev typescript
 ➤ YN0000: ┌ Resolution step
 ➤ YN0000: └ Completed in 0s 507ms
@@ -77,7 +77,7 @@ $ yarn dlx @yarnpkg/sdks vscode
 ➤ YN0000: └ Completed
 ```
 
-### Installing the Yarn Typescript plugin
+###  Installing the Yarn Typescript plugin
 
 ```bash
 $ yarn plugin import typescript
@@ -102,11 +102,12 @@ yarn tsc --init
 Installing a repo-wide package:
 
 ```bash
-yarn add --dev ts-node 
+yarn add --dev ts-node
 yarn add -D -W <package>
 ```
 
 Adding a dependency to a specific workspace:
+
 ```bash
 yarn workspace @foundation/frontend-core add -D typescript
 ```
@@ -120,12 +121,10 @@ run `yarn install` to update the lockfile and help resolve.
 Commands
 
 Start the cli
+
 ```bash
 yarn app:cli start
 ```
-
-
-
 
 Current issues
 

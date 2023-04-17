@@ -26,14 +26,13 @@ export const withNextBundleAnalyzer = (options: NextBundleAnalyzerOptions) => {
     webpack(webpackConfig: any, webpackOptions: any) {
       // const { isServer } = webpackOptions;
       if (enabled) {
-        const filenameExt = options.analyzerMode === 'json'
-          ? '.json'
-          : '.html';
+        const filenameExt = options.analyzerMode === 'json' ? '.json' : '.html';
 
         const analyzerMode = 'static';
         const reportFilename = !webpackOptions.nextRuntime
           ? `./analyze/client${filenameExt}`
-          : `../${webpackOptions.nextRuntime === 'nodejs' ? '../' : ''}analyze/${webpackOptions.nextRuntime}${filenameExt}`;
+          : `../${webpackOptions.nextRuntime === 'nodejs' ? '../' : ''
+          }analyze/${webpackOptions.nextRuntime}${filenameExt}`;
 
         webpackConfig.plugins.push(
           new BundleAnalyzerPlugin({

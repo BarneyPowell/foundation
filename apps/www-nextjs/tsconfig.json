@@ -24,11 +24,14 @@
     "paths": {
       "@/*": ["./src/*"],
       "@foundation/core": ["../../packages/core/src"],
-      "@foundation/core/*": ["../../packages/core/src/*"],
+      "@foundation/core/*": ["../../packages/core/src/*"]
     }
   },
   "include": [
-    "next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", ".next"]
 }

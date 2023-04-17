@@ -5,4 +5,4 @@ module.exports = {
     'plugin:react/recommended',
   ],
   plugins: ['react-hooks', 'react'],
-}
+};

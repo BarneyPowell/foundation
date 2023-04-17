@@ -8,9 +8,7 @@ const importRules = require('@foundation/eslint-config-react/rules/import');
 const jsxA11yRules = require('@foundation/eslint-config-react/rules/jsx-a11y');
 
 module.exports = {
-  extends: [
-    'next/core-web-vitals',
-  ],
+  extends: ['next/core-web-vitals'],
   rules: {
     ...reactRules.rules,
     ...importRules.rules,

@@ -1,5 +1,5 @@
 import sayHello from '@foundation/core/getMessage';
 
-const message = sayHello("Barney");
+const message = sayHello('Barney');
 
 console.log(message);

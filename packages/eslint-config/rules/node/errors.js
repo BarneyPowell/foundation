@@ -1,5 +1,4 @@
 module.exports = {
-
   rules: {
     // enforce return after a callback
     'callback-return': 'off',

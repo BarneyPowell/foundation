@@ -1,12 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-  //   "outDir": ".",
-  //   "rootDir": ".",
+    //   "outDir": ".",
+    //   "rootDir": ".",
     "composite": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["**/*.ts"]
 }

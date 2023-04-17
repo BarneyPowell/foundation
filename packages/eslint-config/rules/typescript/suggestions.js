@@ -6,11 +6,10 @@ const { rules: baseRules } = require('../suggestions');
 
 module.exports = {
   rules: {
-
     // Replace Airbnb 'camelcase' rule with '@typescript-eslint/naming-convention'
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
     camelcase: 'off',
-    // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and 
+    // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and
     // `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already
     // takes care of this.
     '@typescript-eslint/naming-convention': [
@@ -44,7 +43,8 @@ module.exports = {
     // Replace Airbnb 'no-array-constructor' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
     'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': baseRules['no-array-constructor'],
+    '@typescript-eslint/no-array-constructor':
+      baseRules['no-array-constructor'],
 
     // disallow use of eval()-like methods
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md
@@ -90,34 +90,36 @@ module.exports = {
     // Replace Airbnb 'no-unused-expressions' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': baseRules['no-unused-expressions'],
+    '@typescript-eslint/no-unused-expressions':
+      baseRules['no-unused-expressions'],
 
     // Replace Airbnb 'no-useless-constructor' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': baseRules['no-useless-constructor'],
+    '@typescript-eslint/no-useless-constructor':
+      baseRules['no-useless-constructor'],
 
     // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
     'no-return-await': 'off',
-    '@typescript-eslint/return-await': [baseRules['no-return-await'], 'in-try-catch'],
+    '@typescript-eslint/return-await': [
+      baseRules['no-return-await'],
+      'in-try-catch',
+    ],
 
     // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
     'require-await': 'off',
     '@typescript-eslint/require-await': baseRules['require-await'],
-
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-
         // These rules are already checked by the TypeScript compiler, so shouldn't be checked
         // by ESLint based on the default settings for JavaScript files.
         // Based on the Airbnb TypeScript config which in turn was inspired by
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
-        
       },
     },
   ],

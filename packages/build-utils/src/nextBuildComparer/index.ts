@@ -1,9 +1,7 @@
 import { readFile } from 'fs/promises';
 import { NextBuildComparerOptions } from './types';
 
-export type {
-  NextBuildComparerOptions,
-} from './types';
+export type { NextBuildComparerOptions } from './types';
 
 export type BuildAsset = {
   label: string;
@@ -34,9 +32,8 @@ const calculateEntrypointSizes = (bundles: BuildAsset[]): EntrypointsByKey => {
   const entrypoints: EntrypointsByKey = {};
 
   for (let x = 0; x < bundles.length; x + 1) {
-    const { 
-      isInitialByEntrypoint, statSize, parsedSize, gzipSize,
-    } = bundles[x];
+    const { isInitialByEntrypoint, statSize, parsedSize, gzipSize } =
+      bundles[x];
 
     const entrypointKeys = Object.keys(isInitialByEntrypoint);
     entrypointKeys.forEach((key: string) => {
@@ -84,6 +81,4 @@ const nextBuildComparer = async (options: NextBuildComparerOptions) => {
   return generateTable(entrypoints);
 };
 
-export {
-  nextBuildComparer,
-};
+export { nextBuildComparer };

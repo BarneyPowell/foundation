@@ -4,10 +4,10 @@
  *
  * https://www.npmjs.com/package/@rushstack/eslint-patch
  */
-const keptPaths = []
-const sortedPaths = []
-const cwd = process.cwd().replace(/\\/g, '/')
-const originalPaths = require.resolve.paths('eslint-plugin-import')
+const keptPaths = [];
+const sortedPaths = [];
+const cwd = process.cwd().replace(/\\/g, '/');
+const originalPaths = require.resolve.paths('eslint-plugin-import');
 
 // eslint throws a conflict error when plugins resolve to different
 // locations, since we want to lock our dependencies by default
@@ -16,17 +16,17 @@ const originalPaths = require.resolve.paths('eslint-plugin-import')
 // eslint-config-next's dependencies if needed
 
 for (let i = originalPaths.length - 1; i >= 0; i--) {
-  const currentPath = originalPaths[i]
+  const currentPath = originalPaths[i];
 
   if (currentPath.replace(/\\/g, '/').startsWith(cwd)) {
-    sortedPaths.push(currentPath)
+    sortedPaths.push(currentPath);
   } else {
-    keptPaths.unshift(currentPath)
+    keptPaths.unshift(currentPath);
   }
 }
 
 // maintain order of node_modules outside of cwd
-sortedPaths.push(...keptPaths)
+sortedPaths.push(...keptPaths);
 
 const hookPropertyMap = new Map(
   [
@@ -38,34 +38,27 @@ const hookPropertyMap = new Map(
     request,
     require.resolve(replacement, { paths: sortedPaths }),
   ])
-)
+);
 
-const mod = require('module')
-const resolveFilename = mod._resolveFilename
+const mod = require('module');
+const resolveFilename = mod._resolveFilename;
 mod._resolveFilename = function (request, parent, isMain, options) {
-  const hookResolved = hookPropertyMap.get(request)
+  const hookResolved = hookPropertyMap.get(request);
   if (hookResolved) {
-    request = hookResolved
+    request = hookResolved;
   }
-  return resolveFilename.call(mod, request, parent, isMain, options)
-}
+  return resolveFilename.call(mod, request, parent, isMain, options);
+};
 
-require('@rushstack/eslint-patch/modern-module-resolution')
-
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-  extends: [
-    require.resolve('./import'),
-  ],
-  rules: {
-  },
+  extends: [require.resolve('./import')],
+  rules: {},
   overrides: [
     {
-      files: ['**/*.tsx','**/*.jsx'],
-      extends: [
-        require.resolve('./jsx-a11y'),
-        require.resolve('./react'),
-      ],
+      files: ['**/*.tsx', '**/*.jsx'],
+      extends: [require.resolve('./jsx-a11y'), require.resolve('./react')],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
@@ -85,4 +78,4 @@ module.exports = {
     browser: true,
     node: true,
   },
-}
+};

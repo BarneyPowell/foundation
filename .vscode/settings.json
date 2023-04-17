@@ -2,7 +2,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true, // Tell VSCode to format files on save
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Tell VSCode to use Prettier as default file formatter
   "editor.rulers": [100],
   "files.eol": "\n",
   "search.exclude": {
@@ -45,5 +46,7 @@
     }
   ],
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-  "prettier.eslintIntegration": true
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

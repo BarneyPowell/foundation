@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "@foundation/eslint-config-next"
-  ],
+  "extends": ["@foundation/eslint-config-next"],
   // "extends": [
   //   "next/core-web-vitals",
   //   "../../.eslintrc.json"
