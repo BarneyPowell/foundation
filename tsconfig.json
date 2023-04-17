@@ -32,6 +32,7 @@
     "rootDir": "." /* Specify what module code is generated. */,
     "rootDirs": [
       "./apps",
+      "./packages/build-utils/src",
       "./packages/core/src"
     ] /* Specify the root folder within your source files. */,
     "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
