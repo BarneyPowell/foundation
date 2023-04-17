@@ -2,6 +2,16 @@
   "name": "@foundation/eslint-config-react",
   "packageManager": "yarn@3.5.0",
   "version": "0.0.0",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./react": "./react/index.js",
+    "./import": "./import/index.js",
+    "./jsx-a11y": "./jsx-a11y/index.js",
+    "./rules/react": "./rules/react/index.js",
+    "./rules/import": "./rules/import/index.js",
+    "./rules/jsx-a11y": "./rules/jsx-a11y/index.js"
+  },
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "yarn lint --fix"
@@ -15,7 +25,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.5.0"
   },
   "peerDependencies": {
     "eslint": "^8.37.0",

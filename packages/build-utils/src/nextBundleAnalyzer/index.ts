@@ -11,11 +11,12 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 // } from './interfaces/BuildStats';
 
 export type NextBundleAnalyzerOptions = BundleAnalyzerPlugin.Options & {
-  enabled: boolean,
-  openAnalyzer: boolean
+  enabled: boolean;
+  openAnalyzer: boolean;
 };
 
-export function withNextBundleAnalyzer(options: NextBundleAnalyzerOptions) {
+export const withNextBundleAnalyzer = (options: NextBundleAnalyzerOptions) => {
+  const { enabled } = options;
   // const internalOptions = getInternalOptions(options);
   // const { clientOnly, enabled, reportDir } = internalOptions;
   // let { reportFilename } = internalOptions;
@@ -24,8 +25,7 @@ export function withNextBundleAnalyzer(options: NextBundleAnalyzerOptions) {
     ...nextConfig,
     webpack(webpackConfig: any, webpackOptions: any) {
       // const { isServer } = webpackOptions;
-      if (options.enabled) {
-
+      if (enabled) {
         const filenameExt = options.analyzerMode === 'json'
           ? '.json'
           : '.html';
@@ -39,7 +39,7 @@ export function withNextBundleAnalyzer(options: NextBundleAnalyzerOptions) {
           new BundleAnalyzerPlugin({
             analyzerMode,
             reportFilename,
-            ...options
+            ...options,
           })
         );
       }
@@ -49,4 +49,4 @@ export function withNextBundleAnalyzer(options: NextBundleAnalyzerOptions) {
         : webpackConfig;
     },
   });
-}
+};

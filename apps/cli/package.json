@@ -6,11 +6,11 @@
   "type": "module",
   "scripts": {
     "x-build": "yarn clean && yarn compile",
-    "clean": "rimraf ./dist",
-    "compile": "tsc --build",
-    "start": "yarn node dist/index.js",
-    "run": "ts-node ./src/index.ts",
-    "test": "echo hello"
+    "xclean": "rimraf ./dist",
+    "xcompile": "tsc --build",
+    "xstart": "yarn node dist/index.js",
+    "xrun": "ts-node ./src/index.ts",
+    "xtest": "echo hello"
   },
   "devDependencies": {
     "typescript": "^5.0.2"

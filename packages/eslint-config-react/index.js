@@ -32,6 +32,7 @@ const hookPropertyMap = new Map(
   [
     ['eslint-plugin-import', 'eslint-plugin-import'],
     ['eslint-plugin-react', 'eslint-plugin-react'],
+    ['eslint-plugin-react-hooks', 'eslint-plugin-react-hooks'],
     ['eslint-plugin-jsx-a11y', 'eslint-plugin-jsx-a11y'],
   ].map(([request, replacement]) => [
     request,
@@ -54,7 +55,7 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   extends: [
-    require.resolve('./rules/import'),
+    require.resolve('./import'),
   ],
   rules: {
   },
@@ -62,8 +63,8 @@ module.exports = {
     {
       files: ['**/*.tsx','**/*.jsx'],
       extends: [
-        require.resolve('./rules/jsx-a11y'),
-        require.resolve('./rules/react'),
+        require.resolve('./jsx-a11y'),
+        require.resolve('./react'),
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {

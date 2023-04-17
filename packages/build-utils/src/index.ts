@@ -1,19 +1,19 @@
 import { 
-  nextBuildComparer
+  nextBuildComparer,
 } from './nextBuildComparer';
 
 export type { 
-  NextBuildComparerOptions
+  NextBuildComparerOptions,
 } from './nextBuildComparer';
 
 export {
-  withNextBundleAnalyzer
+  withNextBundleAnalyzer,
 } from './nextBundleAnalyzer';
 
 export type {
-  NextBundleAnalyzerOptions
+  NextBundleAnalyzerOptions,
 } from './nextBundleAnalyzer';
 
 export {
-  nextBuildComparer
-}
+  nextBuildComparer,
+};
