@@ -22,9 +22,6 @@
     "xprebuild": "yarn workspaces foreach -ptv run clean",
     "xtype-check": "tsc --noEmit"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": "eslint --fix"
-  },
   "devDependencies": {
     "@foundation/eslint-config": "workspace:^",
     "@types/eslint": "8.37.0",
