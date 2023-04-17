@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-config": "eslint . --ext .js,.jsx,.ts,.tsx --ignore-pattern 'src/*'"
   },
   "dependencies": {
     "@foundation/core": "workspace:^",
