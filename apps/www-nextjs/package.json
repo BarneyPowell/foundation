@@ -1,44 +1,30 @@
 {
-  "private": true,
   "name": "@foundation/www-nextjs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "ANALYZE=true next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "script": "ts-node --project tsconfig.local.json -r tsconfig-paths/register",
-    "build-script": "tsc --noEmit -p ",
-    "generateBundleStats": "ts-node --project tsconfig.local.json scripts/compareBuilds.mts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@foundation/core": "workspace:^",
-    "clsx": "1.2.1",
-    "next": "latest",
+    "@foundation/eslint-config": "workspace:^",
+    "@foundation/eslint-config-next": "workspace:^",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "@types/react-dom": "18.0.11",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.38.0",
+    "next": "13.3.0",
+    "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "6.0.0-beta.2",
-    "styled-jsx": "5.1.0"
+    "tailwindcss": "3.3.1",
+    "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@foundation/eslint-config": "workspace:^",
-    "@foundation/eslint-config-react": "workspace:^",
-    "@types/node": "18.0.3",
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.37.0",
-    "eslint-config-next": "latest",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-yaml": "^0.5.0",
-    "next-build-id": "^3.0.0",
-    "next-compose-plugins": "^2.2.1",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.6",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.0.3"
+    "@types/eslint": "8.37.0"
   }
 }

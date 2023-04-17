@@ -1,9 +1,4 @@
 module.exports = {
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-  ],
-  plugins: ['react'],
   rules: {
     // Functional components can be quite long - so it's better to either turn this rule off or to 
     // set something more reasonable for tsx files.

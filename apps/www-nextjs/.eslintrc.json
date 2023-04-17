@@ -1,6 +1,10 @@
 {
   "extends": [
-    "../../.eslintrc.json"
+    "@foundation/eslint-config-next"
   ],
-  "parserOptions": { "project": ["./tsconfig.local.json"] }
+  // "extends": [
+  //   "next/core-web-vitals",
+  //   "../../.eslintrc.json"
+  // ],
+  "parserOptions": { "project": ["./tsconfig.json"] }
 }

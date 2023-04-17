@@ -1,0 +1,10 @@
+{
+  "files": [], 
+  "references": [
+    // { "path": "apps/cli" },  
+    { "path": "apps/www-nextjs" },
+    { "path": "packages/core" },
+    { "path": "packages/build-utils" },
+    // { "path": "packages/www-nextjs" },
+  ]
+}
