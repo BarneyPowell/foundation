@@ -1,9 +1,29 @@
 {
   "name": "foundation",
   "private": true,
-  "packageManager": "yarn@3.5.0",
-  "engines": {
-    "node": "^18.15.0"
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "app:cli": "yarn workspace @foundation/cli",
+    "app:www-nextjs": "yarn workspace @foundation/www-nextjs",
+    "package:build-utils": "yarn workspace @foundation/build-utils",
+    "package:core": "yarn workspace @foundation/core",
+    "package:eslint-config": "yarn workspace @foundation/eslint-config",
+    "package:eslint-config-next": "yarn workspace @foundation/eslint-config-next",
+    "package:eslint-config-react": "yarn workspace @foundation/eslint-config-react",
+    "root:build": "yarn workspaces foreach -ptv run build",
+    "root:clean": "yarn workspaces foreach run clean",
+    "root:lint": "yarn workspaces foreach -ptv run lint",
+    "root:prettier-check": "prettier -c .",
+    "xbuild": "tsc --build",
+    "xcompile": "tsc --build",
+    "xprebuild": "yarn workspaces foreach -ptv run clean",
+    "xtype-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": "eslint --fix"
   },
   "devDependencies": {
     "@foundation/eslint-config": "workspace:^",
@@ -28,28 +48,8 @@
     "tsconfig-paths": "4.2.0",
     "typescript": "5.0.4"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "scripts": {
-    "app:cli": "yarn workspace @foundation/cli",
-    "app:www-nextjs": "yarn workspace @foundation/www-nextjs",
-    "package:core": "yarn workspace @foundation/core",
-    "package:build-utils": "yarn workspace @foundation/build-utils",
-    "package:eslint-config": "yarn workspace @foundation/eslint-config",
-    "package:eslint-config-next": "yarn workspace @foundation/eslint-config-next",
-    "package:eslint-config-react": "yarn workspace @foundation/eslint-config-react",
-    "root:build": "yarn workspaces foreach -ptv run build",
-    "root:lint": "yarn workspaces foreach -ptv run lint",
-    "root:clean": "yarn workspaces foreach run clean",
-    "root:prettier-check": "prettier -c .",
-    "xcompile": "tsc --build",
-    "xtype-check": "tsc --noEmit",
-    "xprebuild": "yarn workspaces foreach -ptv run clean",
-    "xbuild": "tsc --build"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix"
+  "packageManager": "yarn@3.5.0",
+  "engines": {
+    "node": "^18.15.0"
   }
 }
