@@ -5,9 +5,7 @@ module.exports = {
     './rules/format',
     './rules/import',
   ].map(require.resolve),
-  plugins: [
-    'json-format',
-  ],
+  plugins: ['json-format'],
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',

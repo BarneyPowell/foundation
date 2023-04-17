@@ -6,7 +6,6 @@ const { rules: baseRules } = require('../format');
 
 module.exports = {
   rules: {
-
     // Require that function overload signatures be consecutive
     // https://typescript-eslint.io/rules/adjacent-overload-signatures
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -54,7 +53,8 @@ module.exports = {
     // Replace Airbnb 'lines-between-class-members' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/lines-between-class-members.md
     'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': baseRules['lines-between-class-members'],
+    '@typescript-eslint/lines-between-class-members':
+      baseRules['lines-between-class-members'],
 
     // Require a specific member delimiter style for interfaces and type literals
     // https://typescript-eslint.io/rules/member-delimiter-style
@@ -99,7 +99,8 @@ module.exports = {
     // Replace Airbnb 'space-before-function-paren' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
     'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': baseRules['space-before-function-paren'],
+    '@typescript-eslint/space-before-function-paren':
+      baseRules['space-before-function-paren'],
 
     // Replace Airbnb 'space-infix-ops' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.md
@@ -109,13 +110,12 @@ module.exports = {
     // Replace Airbnb 'object-curly-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/object-curly-spacing.md
     'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': baseRules['object-curly-spacing'],
+    '@typescript-eslint/object-curly-spacing':
+      baseRules['object-curly-spacing'],
 
     // Require consistent spacing around type annotations
     // https://typescript-eslint.io/rules/type-annotation-spacing
     '@typescript-eslint/type-annotation-spacing': 'error',
-
   },
-  overrides: [
-  ],
+  overrides: [],
 };

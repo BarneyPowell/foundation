@@ -1,19 +1,9 @@
-import { 
-  nextBuildComparer,
-} from './nextBuildComparer';
+import { nextBuildComparer } from './nextBuildComparer';
 
-export type { 
-  NextBuildComparerOptions,
-} from './nextBuildComparer';
+export type { NextBuildComparerOptions } from './nextBuildComparer';
 
-export {
-  withNextBundleAnalyzer,
-} from './nextBundleAnalyzer';
+export { withNextBundleAnalyzer } from './nextBundleAnalyzer';
 
-export type {
-  NextBundleAnalyzerOptions,
-} from './nextBundleAnalyzer';
+export type { NextBundleAnalyzerOptions } from './nextBundleAnalyzer';
 
-export {
-  nextBuildComparer,
-};
+export { nextBuildComparer };

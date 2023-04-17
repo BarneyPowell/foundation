@@ -25,7 +25,6 @@ module.exports = {
     'import/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
   rules: {
-
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [

@@ -6,31 +6,31 @@ orbs:
   node: circleci/node@5.1.0
 
 executors:
-    default:
+  default:
+    description: |
+      Select the version of Node.js to use. Uses CircleCI's highly cached convenience images built for CI.
+      Any available tag from this list can be used: https://hub.docker.com/r/cimg/node/tags
+    docker:
+      - image: cimg/node:<<parameters.tag>>
+    parameters:
+      resource_class:
+        default: large
+        description: Configure the executor resource class
+        enum:
+          - small
+          - medium
+          - medium+
+          - large
+          - xlarge
+          - 2xlarge
+          - 2xlarge+
+        type: enum
+      tag:
+        default: lts
         description: |
-            Select the version of Node.js to use. Uses CircleCI's highly cached convenience images built for CI.
-            Any available tag from this list can be used: https://hub.docker.com/r/cimg/node/tags
-        docker:
-            - image: cimg/node:<<parameters.tag>>
-        parameters:
-            resource_class:
-                default: large
-                description: Configure the executor resource class
-                enum:
-                    - small
-                    - medium
-                    - medium+
-                    - large
-                    - xlarge
-                    - 2xlarge
-                    - 2xlarge+
-                type: enum
-            tag:
-                default: lts
-                description: |
-                    Pick a specific cimg/node image version tag: https://hub.docker.com/r/cimg/node
-                type: string
-        resource_class: << parameters.resource_class >>
+          Pick a specific cimg/node image version tag: https://hub.docker.com/r/cimg/node
+        type: string
+    resource_class: << parameters.resource_class >>
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
@@ -145,7 +145,6 @@ jobs:
           working_directory: <<parameters.app-dir>>
       - steps: << parameters.teardown >>
 
-
   post-nextjs-stats:
     docker:
       - image: cimg/node:18.15-browsers
@@ -170,11 +169,6 @@ jobs:
               --data-raw '{
                   "body": "This would be the data to add"
               }'
-            
-
-
-
-
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows

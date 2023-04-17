@@ -2,7 +2,6 @@
 // These rules relate to possible logic errors in code.
 module.exports = {
   rules: {
-
     // Enforce return statements in callbacks of array methods
     // https://eslint.org/docs/rules/array-callback-return
     'array-callback-return': ['error', { allowImplicit: true }],
@@ -155,9 +154,12 @@ module.exports = {
 
     // Disallow assignments where both sides are exactly the same
     // https://eslint.org/docs/rules/no-self-assign
-    'no-self-assign': ['error', {
-      props: true,
-    }],
+    'no-self-assign': [
+      'error',
+      {
+        props: true,
+      },
+    ],
 
     // Disallow comparisons where both sides are exactly the same
     // https://eslint.org/docs/rules/no-self-compare
@@ -189,7 +191,7 @@ module.exports = {
 
     // Disallow unmodified loop conditions
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
-    'no-unmodified-loop-condition': 'off',    
+    'no-unmodified-loop-condition': 'off',
 
     // Disallow unreachable statements after return, throw, continue, or break statements
     // https://eslint.org/docs/latest/rules/no-unreachable
@@ -197,9 +199,12 @@ module.exports = {
 
     // Disallow loops with a body that allows only one iteration
     // https://eslint.org/docs/rules/no-unreachable-loop
-    'no-unreachable-loop': ['error', {
-      ignore: [], // DoWhileStatement, ForInStatement, ForOfStatement, ForStatement, WhileStatement
-    }],
+    'no-unreachable-loop': [
+      'error',
+      {
+        ignore: [], // DoWhileStatement, ForInStatement, ForOfStatement, ForStatement,WhileStatement
+      },
+    ],
 
     // Disallow control flow statements in finally blocks
     // https://eslint.org/docs/rules/no-unsafe-finally
@@ -211,11 +216,14 @@ module.exports = {
 
     // Disallow use of optional chaining in contexts where the undefined value is not allowed
     // https://eslint.org/docs/rules/no-unsafe-optional-chaining
-    'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
+    'no-unsafe-optional-chaining': [
+      'error',
+      { disallowArithmeticOperators: true },
+    ],
 
     // Disallow unused private class members
     // https://eslint.org/docs/rules/no-unused-private-class-members
-    'no-unused-private-class-members': 'error',    
+    'no-unused-private-class-members': 'error',
 
     // Disallow unused variables
     // https://eslint.org/docs/latest/rules/no-unused-vars
@@ -227,24 +235,23 @@ module.exports = {
     // https://eslint.org/docs/latest/rules/no-use-before-define
     // TODO: Enable `no-use-before-define`
     'no-use-before-define': 'off',
-    // 'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],    
+    // 'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
 
     // Disallow useless backreferences in regular expressions
     // https://eslint.org/docs/rules/no-useless-backreference
     'no-useless-backreference': 'error',
-    
+
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // https://eslint.org/docs/rules/require-atomic-updates
     // note: not enabled because it is very buggy
     'require-atomic-updates': 'off',
-    
+
     // Require calls to `isNaN()` when checking for NaN
     // https://eslint.org/docs/latest/rules/use-isnan
-    'use-isnan': 'error',    
+    'use-isnan': 'error',
 
     // Enforce comparing 'typeof' expressions against valid strings
     // https://eslint.org/docs/rules/valid-typeof
     'valid-typeof': ['error', { requireStringLiterals: true }],
-
   },
 };

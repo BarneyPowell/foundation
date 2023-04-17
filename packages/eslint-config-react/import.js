@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    './rules/import'
-  ],
+  extends: ['./rules/import'],
   plugins: ['import'],
   rules: {
     'import/no-anonymous-default-export': 'warn',
@@ -19,4 +17,4 @@ module.exports = {
       },
     },
   },
-}
+};

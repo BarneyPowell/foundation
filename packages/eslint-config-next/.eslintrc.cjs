@@ -14,9 +14,7 @@ module.exports = {
   overrides: [
     {
       files: ['test/*.ts', 'test/*.js', 'test/*.tsx', 'test/*.jsx'],
-      extends: [
-        require.resolve('./index'),
-      ],
+      extends: [require.resolve('./index')],
     },
   ],
 };
