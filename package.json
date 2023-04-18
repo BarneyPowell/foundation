@@ -23,6 +23,8 @@
     "xtype-check": "tsc --noEmit"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.1",
+    "@commitlint/config-conventional": "^17.6.1",
     "@foundation/eslint-config": "workspace:^",
     "@types/eslint": "8.37.0",
     "@types/node": "18.15.11",
