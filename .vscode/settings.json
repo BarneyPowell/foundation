@@ -29,6 +29,10 @@
       "changeProcessCWD": true
     },
     {
+      "directory": "./apps/storybook-react",
+      "changeProcessCWD": true
+    },
+    {
       "directory": "./packages/core",
       "changeProcessCWD": true
     },
