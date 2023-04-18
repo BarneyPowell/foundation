@@ -363,6 +363,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.57.0
     eslint: ^8.37.0
     eslint-config-next: 13.3.0
+    next: ^13.3.0
   peerDependencies:
     eslint: ^8.37.0
     typescript: ^5.0.2
@@ -406,6 +407,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@foundation/ui-react@workspace:^, @foundation/ui-react@workspace:packages/ui-react":
+  version: 0.0.0-use.local
+  resolution: "@foundation/ui-react@workspace:packages/ui-react"
+  dependencies:
+    "@foundation/eslint-config-react": "workspace:^"
+    "@types/eslint": ^8
+    "@types/react": ^18.0.37
+    eslint: ^8.37.0
+    react: ^18.2.0
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
+
 "@foundation/www-nextjs@workspace:apps/www-nextjs":
   version: 0.0.0-use.local
   resolution: "@foundation/www-nextjs@workspace:apps/www-nextjs"
@@ -413,6 +427,7 @@ __metadata:
     "@foundation/core": "workspace:^"
     "@foundation/eslint-config": "workspace:^"
     "@foundation/eslint-config-next": "workspace:^"
+    "@foundation/ui-react": "workspace:^"
     "@types/eslint": 8.37.0
     "@types/node": 18.15.11
     "@types/react": 18.0.35
@@ -837,6 +852,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e65670397216e037b150a509ec08189140b4c20b82b612ac00b2a7133202be2d1def1e7ee69617b2df06ab4c00c43c4ee23e84788ad661aea9664da2f27c518a
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.0.37":
+  version: 18.0.37
+  resolution: "@types/react@npm:18.0.37"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 6a6c8feada1d6aa2d01a38c44ce09598d93688e97ed21511d5e34fd7fe748b760dd957a5ac0725f5643d8d7e1a0ade6478ebd4be96c9605c5d6816b17ad35d2d
   languageName: node
   linkType: hard
 
@@ -4756,7 +4782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:13.3.0":
+"next@npm:13.3.0, next@npm:^13.3.0":
   version: 13.3.0
   resolution: "next@npm:13.3.0"
   dependencies:
@@ -5446,7 +5472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
+"react@npm:18.2.0, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -6633,7 +6659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.0.4, typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.0.2":
+"typescript@npm:5.0.4, typescript@npm:^4.6.4 || ^5.0.0, typescript@npm:^5.0.2, typescript@npm:^5.0.4":
   version: 5.0.4
   resolution: "typescript@npm:5.0.4"
   bin:
@@ -6643,7 +6669,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
   version: 5.0.4
   resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
   bin:

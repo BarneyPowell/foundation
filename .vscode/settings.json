@@ -43,6 +43,10 @@
     {
       "directory": "./packages/eslint-config-react",
       "changeProcessCWD": true
+    },
+    {
+      "directory": "./packages/ui-react",
+      "changeProcessCWD": true
     }
   ],
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",

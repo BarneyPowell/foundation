@@ -89,6 +89,7 @@ module.exports = {
           '**/.eslintrc.js', // eslint config
         ],
         optionalDependencies: false,
+        peerDependencies: true,
       },
     ],
 

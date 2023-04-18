@@ -24,14 +24,18 @@
     "paths": {
       "@/*": ["./src/*"],
       "@foundation/core": ["../../packages/core/src"],
-      "@foundation/core/*": ["../../packages/core/src/*"]
+      "@foundation/core/*": ["../../packages/core/src/*"],
+      "@foundation/ui": ["../../packages/ui-react/src"],
+      "@foundation/ui/*": ["../../packages/ui-react/src/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../packages/*/src/**/*.ts",
+    "../../packages/*/src/**/*.tsx"
   ],
   "exclude": ["node_modules", ".next"]
 }

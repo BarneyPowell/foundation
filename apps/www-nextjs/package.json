@@ -13,6 +13,7 @@
     "@foundation/core": "workspace:^",
     "@foundation/eslint-config": "workspace:^",
     "@foundation/eslint-config-next": "workspace:^",
+    "@foundation/ui-react": "workspace:^",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
