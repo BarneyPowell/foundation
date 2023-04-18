@@ -1,0 +1,4 @@
+{
+  "extends": ["@foundation/eslint-config-react"],
+  "parserOptions": { "project": ["./tsconfig.json"] }
+}

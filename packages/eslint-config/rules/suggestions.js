@@ -476,7 +476,7 @@ module.exports = {
       'error',
       {
         restrictedNamedExports: [
-          'default', // use `export default` to provide a default export
+          // 'default', // use `export default` to provide a default export
           'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
         ],
       },

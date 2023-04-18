@@ -4,7 +4,8 @@
     // { "path": "apps/cli" },
     { "path": "apps/www-nextjs" },
     { "path": "packages/core" },
-    { "path": "packages/build-utils" }
+    { "path": "packages/build-utils" },
+    { "path": "packages/ui-react" }
     // { "path": "packages/www-nextjs" },
   ]
 }
