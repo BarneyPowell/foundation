@@ -2,6 +2,7 @@
   "name": "@foundation/storybook-react",
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
+    "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
@@ -29,5 +30,11 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@foundation/ui-react": "workspace:^"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
   }
 }

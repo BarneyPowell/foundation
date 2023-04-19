@@ -2,7 +2,13 @@
   "name": "@foundation/ui-react",
   "packageManager": "yarn@3.5.0",
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean": "rimraf ./dist",
+    "compile": "yarn compile-esm && yarn compile-cjs",
+    "compile-esm": "tsc --build",
+    "compile-cjs": "tsc --build tsconfig.cjs.json",
+    "build": "yarn clean && yarn compile",
+    "rollup": "rollup --bundleConfigAsCjs -c"
   },
   "dependencies": {
     "@types/react": "^18.0.37",
@@ -10,8 +16,21 @@
   },
   "devDependencies": {
     "@foundation/eslint-config-react": "workspace:^",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@types/eslint": "^8",
     "eslint": "^8.37.0",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.20.6",
+    "rollup-plugin-dts": "^5.3.0",
+    "tslib": "^2.5.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
