@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../dist/esm",
+    "resolveJsonModule": true
+  },
+  "references": [{ "path": "../" }]
+}
