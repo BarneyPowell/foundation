@@ -20,10 +20,10 @@
     "paths": {
       "@foundation/core": ["../../packages/core/src"],
       "@foundation/core/*": ["../../packages/core/src/*"],
-      "@foundation/ui": ["../../packages/ui-react/src"],
-      "@foundation/ui/*": ["../../packages/ui-react/src/*"]
+      "@foundation/ui-react": ["../../packages/ui-react/src"],
+      "@foundation/ui-react/*": ["../../packages/ui-react/src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

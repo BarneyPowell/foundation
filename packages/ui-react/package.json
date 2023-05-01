@@ -4,14 +4,11 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean": "rimraf ./dist",
-    "compile": "yarn compile-esm && yarn compile-cjs",
-    "compile-esm": "tsc --build",
-    "compile-cjs": "tsc --build tsconfig.cjs.json",
-    "build": "yarn clean && yarn compile",
-    "rollup": "rollup --bundleConfigAsCjs -c"
+    "compile": "rollup --bundleConfigAsCjs -c",
+    "compile:watch": "yarn compile -w",
+    "build": "yarn clean && yarn compile"
   },
-  "dependencies": {
-    "@types/react": "^18.0.37",
+  "peerDependencies": {
     "react": "^18.2.0"
   },
   "devDependencies": {
@@ -20,10 +17,15 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/eslint": "^8",
+    "@types/react": "^18.2.0",
+    "@types/rollup-plugin-peer-deps-external": "^2",
     "eslint": "^8.37.0",
+    "postcss": "^8.4.23",
     "rimraf": "^5.0.0",
     "rollup": "^3.20.6",
     "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
   },

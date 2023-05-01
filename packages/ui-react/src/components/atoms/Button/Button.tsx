@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => (
-  <button className="f8n-button">{props.label}</button>
+  <button className="f8n-button">ssdk: {props.label}</button>
 );
 
 export default Button;
