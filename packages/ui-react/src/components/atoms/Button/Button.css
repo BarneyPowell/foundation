@@ -7,5 +7,6 @@
   display: inline-block;
   line-height: 1;
   color: white;
-  background-color: #1ea7fd;
+  padding: 0.3em;
+  background-color: orange;
 }
